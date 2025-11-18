@@ -1,6 +1,188 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+<meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>SignStix Navigation (ScreenCloud-Style Approx)</title>
+  <style>
+    /* Base reset */
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+    body {
+      font-family: 'Inter', sans-serif;
+      color: #1a1a1a;
+    }
+    a {
+      text-decoration: none;
+      color: inherit;
+    }
+
+    /* Navbar */
+    .navbar {
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 16px 40px;
+      background-color: rgba(255, 255, 255, 0.95);
+      backdrop-filter: blur(8px);
+      box-shadow: 0 1px 4px rgba(0, 0, 0, 0.08);
+      transition: padding 0.3s;
+    }
+
+    .navbar .logo {
+      font-size: 1.5rem;
+      font-weight: 600;
+      color: #111;
+    }
+
+    .navbar-nav {
+      display: flex;
+      align-items: center;
+      gap: 32px;
+    }
+
+    .nav-item {
+      position: relative;
+    }
+
+    .nav-item > a {
+      padding: 8px 0;
+      font-size: 1rem;
+      color: #111;
+      transition: color 0.2s;
+    }
+
+    .nav-item > a:hover {
+      color: #0066ff;
+    }
+
+    /* Dropdown */
+    .dropdown-menu {
+      display: none;
+      position: absolute;
+      top: calc(100% + 4px);
+      left: 0;
+      background: #fff;
+      border-radius: 6px;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+      padding: 8px 0;
+      min-width: 180px;
+    }
+
+    .dropdown-menu a {
+      display: block;
+      padding: 8px 20px;
+      font-size: 0.95rem;
+      color: #111;
+    }
+
+    .dropdown-menu a:hover {
+      background-color: #f5f5f5;
+    }
+
+    .nav-item.dropdown:hover .dropdown-menu {
+      display: block;
+    }
+
+    /* Buttons */
+    .navbar-buttons {
+      display: flex;
+      align-items: center;
+      gap: 16px;
+    }
+
+    .btn {
+      padding: 8px 16px;
+      border-radius: 4px;
+      font-size: 0.95rem;
+      font-weight: 500;
+      transition: background-color 0.2s, color 0.2s, border-color 0.2s;
+      border: 1px solid transparent;
+    }
+
+    .btn-primary {
+      background-color: #0066ff;
+      color: white;
+      border-color: #0066ff;
+    }
+
+    .btn-primary:hover {
+      background-color: #0052cc;
+      border-color: #0052cc;
+    }
+
+    .btn-outline {
+      background-color: transparent;
+      color: #0066ff;
+      border-color: #0066ff;
+    }
+
+    .btn-outline:hover {
+      background-color: #0066ff;
+      color: white;
+    }
+
+    /* Responsive */
+    @media (max-width: 768px) {
+      .navbar {
+        padding: 12px 20px;
+      }
+      .navbar-nav {
+        width: 100%;
+        justify-content: space-around;
+        margin-top: 12px;
+      }
+      .navbar-buttons {
+        width: 100%;
+        justify-content: space-around;
+        margin-top: 12px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <header class="navbar">
+    <div class="logo">SignStix</div>
+
+    <nav class="navbar-nav">
+      <div class="nav-item"><a href="#">How it works</a></div>
+
+      <div class="nav-item dropdown">
+        <a href="#">Products & CMS</a>
+        <div class="dropdown-menu">
+          <a href="#">CMS Dashboard</a>
+          <a href="#">Integrations</a>
+          <a href="#">APIs</a>
+        </div>
+      </div>
+
+      <div class="nav-item dropdown">
+        <a href="#">Solutions</a>
+        <div class="dropdown-menu">
+          <a href="#">Retail</a>
+          <a href="#">Education</a>
+          <a href="#">Healthcare</a>
+          <a href="#">Hospitality</a>
+        </div>
+      </div>
+
+      <div class="nav-item"><a href="#">Resources</a></div>
+      <div class="nav-item"><a href="#">Company</a></div>
+    </nav>
+
+    <div class="navbar-buttons">
+      <button class="btn btn-outline">Login</button>
+      <button class="btn btn-primary">Free Trial</button>
+    </div>
+  </header>
+  
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>SignStix-Style Page</title>
