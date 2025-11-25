@@ -1,0 +1,421 @@
+/* Reset / Base */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+body {
+  font-family: "Inter", sans-serif;
+  color: #333;
+  line-height: 1.5;
+  background-color: #fff;
+}
+
+.container {
+  width: 90%;
+  max-width: 1240px;
+  margin: 0 auto;
+}
+
+/* ============================
+   Header / Navigation (from before)
+   ============================ */
+.sc-header {
+  width: 100%;
+  background: #ffffff;
+  border-bottom: 1px solid rgba(0,0,0,0.08);
+  position: sticky;
+  top: 0;
+  z-index: 999;
+}
+.sc-header__inner {
+  max-width: 1240px;
+  margin: 0 auto;
+  padding: 20px 24px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.sc-logo img {
+  height: 32px;
+}
+.sc-nav {
+  display: flex;
+  align-items: center;
+  gap: 32px;
+}
+.sc-nav__links {
+  display: flex;
+  gap: 28px;
+  list-style: none;
+}
+.sc-nav__links a {
+  text-decoration: none;
+  color: #1a1a1a;
+  font-size: 0.95rem;
+  font-weight: 500;
+}
+.sc-nav__links a:hover {
+  opacity: 0.7;
+}
+.sc-btn {
+  padding: 10px 18px;
+  border-radius: 4px;
+  font-size: 0.95rem;
+  font-weight: 600;
+  text-decoration: none;
+  display: inline-block;
+}
+.sc-btn--primary {
+  background: #0058ff;
+  color: white;
+}
+.sc-btn--primary:hover {
+  background: #0046cc;
+}
+.sc-btn--ghost {
+  border: 1px solid #d0d0d0;
+  color: #1a1a1a;
+}
+.sc-btn--ghost:hover {
+  background: #f5f5f5;
+}
+.sc-nav-toggle {
+  display: none;
+  flex-direction: column;
+  gap: 4px;
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+.sc-nav-toggle span {
+  width: 22px;
+  height: 2px;
+  background: #333;
+  transition: 0.3s ease;
+}
+@media (max-width: 1024px) {
+  .sc-nav {
+    position: absolute;
+    left: 0;
+    top: 100%;
+    background: white;
+    width: 100%;
+    padding: 24px;
+    border-bottom: 1px solid rgba(0,0,0,0.08);
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+    transform: translateY(-20px);
+    opacity: 0;
+    pointer-events: none;
+    transition: all 0.25s ease;
+  }
+  .sc-nav.open {
+    transform: translateY(0);
+    opacity: 1;
+    pointer-events: auto;
+  }
+  .sc-nav__links {
+    flex-direction: column;
+    gap: 20px;
+  }
+  .sc-nav__cta {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+  }
+  .sc-nav-toggle {
+    display: flex;
+  }
+}
+
+/* ============================
+   Hero Section
+   ============================ */
+.hero {
+  background-color: #f9f9f9;
+  padding: 80px 0;
+}
+.hero__inner {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 40px;
+}
+.hero__text {
+  flex: 1 1 400px;
+}
+.hero__text h1 {
+  font-size: 2.75rem;
+  line-height: 1.2;
+  margin-bottom: 24px;
+  color: #111;
+}
+.hero__text p {
+  font-size: 1.125rem;
+  margin-bottom: 32px;
+  color: #555;
+}
+.hero__cta .sc-btn {
+  margin-right: 16px;
+}
+.hero__image {
+  flex: 1 1 400px;
+  text-align: center;
+}
+.hero__image img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 8px;
+}
+
+/* ============================
+   Stats Section
+   ============================ */
+.stats {
+  background-color: #ffffff;
+  padding: 60px 0;
+}
+.stats__inner {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  gap: 40px;
+}
+.stat {
+  flex: 1 1 200px;
+  text-align: center;
+}
+.stat__number {
+  font-size: 3rem;
+  font-weight: bold;
+  color: #0058ff;
+  margin-bottom: 12px;
+}
+.stat__label {
+  font-size: 1rem;
+  color: #666;
+}
+
+/* ============================
+   Description / Why Section
+   ============================ */
+.description {
+  padding: 40px 0;
+}
+.description__inner p {
+  font-size: 1.125rem;
+  color: #444;
+  text-align: center;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+/* ============================
+   Why ScreenCloud Features
+   ============================ */
+.why-screencloud {
+  background: #f5f5f5;
+  padding: 60px 0;
+}
+.why-screencloud__inner h2 {
+  text-align: center;
+  font-size: 2rem;
+  margin-bottom: 40px;
+  color: #111;
+}
+.features {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 40px;
+}
+.feature {
+  flex: 1 1 220px;
+  text-align: center;
+}
+.feature img {
+  width: 60px;
+  height: 60px;
+  margin-bottom: 20px;
+}
+.feature h3 {
+  font-size: 1.25rem;
+  margin-bottom: 12px;
+  color: #111;
+}
+.feature p {
+  color: #555;
+  font-size: 1rem;
+}
+
+/* ============================
+   Plug & Play Steps
+   ============================ */
+.plug-play {
+  background: #ffffff;
+  padding: 60px 0;
+}
+.plug-play__inner h2 {
+  text-align: center;
+  font-size: 2rem;
+  margin-bottom: 16px;
+  color: #111;
+}
+.plug-play__inner p {
+  text-align: center;
+  font-size: 1rem;
+  color: #666;
+  margin-bottom: 40px;
+}
+.steps {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 40px;
+}
+.step {
+  flex: 1 1 200px;
+  text-align: center;
+}
+.step__number {
+  font-size: 2.5rem;
+  font-weight: bold;
+  color: #0058ff;
+  margin-bottom: 12px;
+}
+.step h3 {
+  font-size: 1.25rem;
+  margin-bottom: 8px;
+  color: #111;
+}
+.step p {
+  color: #555;
+  font-size: 1rem;
+}
+.plug-play__cta {
+  text-align: center;
+  margin-top: 40px;
+}
+
+/* ============================
+   Integrations
+   ============================ */
+.integrations {
+  background: #f5f5f5;
+  padding: 60px 0;
+}
+.integrations__inner h2 {
+  text-align: center;
+  font-size: 2rem;
+  margin-bottom: 40px;
+  color: #111;
+}
+.integration-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 30px;
+}
+.integration {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100px;
+}
+.integration img {
+  width: 40px;
+  height: 40px;
+  margin-bottom: 8px;
+}
+.integration span {
+  font-size: 0.9rem;
+  color: #555;
+}
+.integrations__cta {
+  text-align: center;
+  margin-top: 40px;
+}
+
+/* ============================
+   Use Cases / Use-cases
+   ============================ */
+.use-cases {
+  background: #ffffff;
+  padding: 60px 0;
+}
+.use-cases__inner h2 {
+  text-align: center;
+  font-size: 2rem;
+  margin-bottom: 40px;
+  color: #111;
+}
+.cases {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 40px;
+}
+.case {
+  flex: 1 1 220px;
+  text-align: center;
+}
+.case h3 {
+  font-size: 1.25rem;
+  margin-bottom: 12px;
+  color: #111;
+}
+.case p {
+  color: #666;
+  font-size: 1rem;
+}
+
+/* ============================
+   Bottom CTA
+   ============================ */
+.bottom-cta {
+  background-color: #0058ff;
+  color: #fff;
+  padding: 80px 0;
+  text-align: center;
+}
+.bottom-cta__inner h2 {
+  font-size: 2rem;
+  margin-bottom: 20px;
+}
+.bottom-cta__inner p {
+  font-size: 1.125rem;
+  margin-bottom: 32px;
+}
+.bottom-cta__buttons .sc-btn {
+  margin-right: 16px;
+}
+
+/* ============================
+   Footer
+   ============================ */
+.footer {
+  background-color: #222;
+  color: #ccc;
+  padding: 24px 0;
+}
+.footer__inner {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 16px;
+}
+.footer__links {
+  list-style: none;
+  display: flex;
+  gap: 24px;
+}
+.footer__links a {
+  color: #ccc;
+  text-decoration: none;
+}
+.footer__links a:hover {
+  color: #fff;
+}
