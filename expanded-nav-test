@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>SignStix Navigation</title>
+
+  <!-- External CSS file -->
+  <link rel="stylesheet" href="extra-nav-css.css">
+</head>
+
+<body>
+
+  <header class="navbar">
+    <a href="https://wc82.github.io/GTM-Testing/signstix-test" class="logo-link">
+      <div class="logo">SignStix</div>
+    </a>
+
+    <nav class="navbar-nav">
+
+      <div class="nav-item dropdown">
+        <a href="#">Product</a>
+        <div class="dropdown-menu">
+          <a href="#">SignStix CMS</a>
+          <a href="#">Hardware</a>
+        </div>
+      </div>
+
+      <div class="nav-item dropdown">
+        <a href="#">Industries</a>
+        <div class="dropdown-menu">
+          <a href="#">Retail</a>
+          <a href="#">Education</a>
+          <a href="#">Healthcare</a>
+          <a href="#">Hospitality</a>
+          <a href="#">Manufacturing</a>
+          <a href="#">Leisure</a>
+          <a href="#">Logistics</a>
+        </div>
+      </div>
+
+      <div class="nav-item dropdown">
+        <a href="#">Use cases</a>
+        <div class="dropdown-menu">
+          <a href="#">Menu boards</a>
+          <a href="#">Video walls</a>
