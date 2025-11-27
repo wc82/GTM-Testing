@@ -144,6 +144,25 @@
         margin-top: 12px;
       }
     }
+    /* ===== Desktop Two-Column Dropdown ===== */
+@media (min-width: 769px) {
+  .dropdown-menu.two-column {
+    display: none;
+    grid-template-columns: 1fr 1fr;
+    gap: 0;
+    min-width: 360px;
+    padding: 12px;
+  }
+
+  .dropdown-menu.two-column a {
+    padding: 8px 16px;
+    white-space: nowrap;
+  }
+
+  .nav-item.dropdown:hover .dropdown-menu.two-column {
+    display: grid;
+  }
+}
   </style>
 </head>
 <body>
@@ -164,7 +183,7 @@
 
       <div class="nav-item dropdown">
         <a href="#">Industries</a>
-        <div class="dropdown-menu">
+        <div class="dropdown-menu two-column">
           <a href="#">Retail</a>
           <a href="#">Education</a>
           <a href="#">Healthcare</a>
