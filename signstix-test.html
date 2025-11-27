@@ -144,23 +144,32 @@
         margin-top: 12px;
       }
     }
-    /* ===== Desktop Two-Column Dropdown ===== */
+/* ===== Desktop Multi-Column Dropdown ===== */
 @media (min-width: 769px) {
-  .dropdown-menu.two-column {
+  .dropdown-menu.multi-column {
     display: none;
-    grid-template-columns: 1fr 1fr;
-    gap: 0;
-    min-width: 360px;
-    padding: 12px;
+    grid-template-columns: repeat(3, 1fr); /* ✅ THREE columns */
+    min-width: 540px;
+    padding: 16px;
+    gap: 12px;
   }
 
-  .dropdown-menu.two-column a {
-    padding: 8px 16px;
-    white-space: nowrap;
-  }
-
-  .nav-item.dropdown:hover .dropdown-menu.two-column {
+  .nav-item.dropdown:hover .dropdown-menu.multi-column {
     display: grid;
+  }
+
+  .dropdown-column {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .dropdown-heading {
+    font-size: 0.8rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    color: #666;
+    padding: 6px 16px 10px;
   }
 }
   </style>
@@ -173,14 +182,37 @@
 
     <nav class="navbar-nav">
 
-      <div class="nav-item dropdown">
-        <a href="#">Product</a>
-        <div class="dropdown-menu">
-          <a href="#">SignStix CMS</a>
-          <a href="#">Hardware</a>
-        </div>
-      </div>
+     <div class="nav-item dropdown">
+  <a href="#">Product</a>
 
+  <div class="dropdown-menu multi-column">
+
+    <!-- FEATURES COLUMN -->
+    <div class="dropdown-column">
+      <h4 class="dropdown-heading">Features</h4>
+      <a href="#">Create Signage</a>
+      <a href="#">Campaign Management</a>
+      <a href="#">Device Management</a>
+      <a href="#">Integrations</a>
+    </div>
+
+    <!-- SOFTWARE COLUMN -->
+    <div class="dropdown-column">
+      <h4 class="dropdown-heading">Software</h4>
+      <a href="#">SignStix Enterprise</a>
+      <a href="#">SignStix Pro</a>
+      <a href="#">SignStix</a>
+    </div>
+
+    <!-- HARDWARE COLUMN -->
+    <div class="dropdown-column">
+      <h4 class="dropdown-heading">Hardware</h4>
+      <a href="#">Devices</a>
+      <a href="#">Screens</a>
+    </div>
+
+  </div>
+</div>
       <div class="nav-item dropdown">
         <a href="#">Industries</a>
         <div class="dropdown-menu two-column">
