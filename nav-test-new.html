@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>SignStix Navigation</title>
+
+<style>
+/* Base reset */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Inter', sans-serif;
+  color: #1a1a1a;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+/* Navbar */
+.navbar {
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 16px 40px;
+  background-color: rgba(255, 255, 255, 0.95);
+  backdrop-filter: blur(8px);
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.08);
+}
+
+.navbar .logo {
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: #111;
+}
+
+.navbar-nav {
+  display: flex;
+  align-items: center;
+  gap: 32px;
+}
+
+.nav-item {
+  position: relative;
+}
+
+.nav-item > a {
+  padding: 8px 0;
+  font-size: 1rem;
+  color: #111;
+}
+
+.nav-item > a:hover {
+  color: #0066ff;
+}
+
+/* Standard Dropdown */
+.dropdown-menu {
+  display: none;
+  position: absolute;
+  top: calc(100% + 4px);
+  left: 0;
+  background: #fff;
+  border-radius: 6px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  padding: 8px 0;
+  min-width: 180px;
+}
+
+.dropdown-menu a {
+  display: block;
+  padding: 8px 20px;
+  font-size: 0.95rem;
+  color: #111;
+}
+
+.dropdown-menu a:hover {
+  background-color: #f5f5f5;
+}
+
+.nav-item.dropdown:hover .dropdown-menu {
+  display: block;
+}
+
+/* ===== DESKTOP MEGA MENU ===== */
+@media (min-width: 769px) {
+
+  .dropdown-menu.mega-menu {
+    position: absolute;
+    top: calc(100% +
+
+  <!-- Hero block -->
+  <section class="hero">
+    <h1>Your Digital Signage Campaign Management Platform</h1>
+    <p>Effortlessly create, manage, and display digital signage with the power of SignStix</p>
+    <div class="buttons">
+      <a href="#">Free Trial</a>
+      <a href="#">Get Demo</a>
+    </div>
+  </section>
+
+  <!-- 3-step plug & play section -->
+  <section class="three-step">
+    <div class="step">
+      <img src="hardware-icon.png" alt="Hardware">
+      <h3>Hardware</h3>
+      <p>Choose the right device — smart TV, media player, or your preferred SignStix CMS-compatible hardware.</p>
+    </div>
+    <div class="step">
+      <img src="software-icon.png" alt="Software">
+      <h3>Software</h3>
+      <p>Install SignStix and manage your digital signage content with ease.</p>
+    </div>
+    <div class="step">
+      <img src="pairing-icon.png" alt="Pairing">
+      <h3>Screen Pairing</h3>
+      <p>Connect your screens with a simple 6-character code.</p>
+    </div>
+  </section>
+
+  <!-- Industries block -->
+  <section class="industries">
+    <h2>Tailored solutions that fit your industry</h2>
+    <div class="industries-list">
+      <div class="industry">Manufacturing</div>
+      <div class="industry">Food & Beverages</div>
+      <div class="industry">Retail</div>
+      <div class="industry">Education</div>
+      <div class="industry">Hospitality</div>
+      <div class="industry">Healthcare</div>
+    </div>
+  </section>
+
+  <!-- Testimonials -->
+  <section class="testimonials">
+    <h2>Real stories, real results</h2>
+    <div class="testimonial">
+      <p>“We chose SignStix for its ease of use, strong security, and simple deployment.”</p>
+      <strong>Mr Delighted – IT Director</strong>
+    </div>
+    <div class="testimonial">
+      <p>“SignStix made us think about what to say to our clients — our screens became a collaboration.”</p>
+      <strong>A Customer – Director</strong>
+    </div>
+  </section>
+
+  <!-- Integrations -->
+  <section class="integrations">
+    <h2>Unlock limitless possibilities with 100s of integrations</h2>
+    <div class="integrations-grid">
+      <div class="integration">
+        <img src="rss-icon.png" alt="RSS">
+        <span>RSS</span>
+      </div>
+      <div class="integration">
+        <img src="weather-icon.png" alt="Weather">
+        <span>Weather</span>
+      </div>
+      <div class="integration">
+        <img src="news-icon.png" alt="News">
+        <span>News</span>
+      </div>
+      <div class="integration">
+        <img src="youtube-icon.png" alt="YouTube">
+        <span>YouTube</span>
+      </div>
+      <div class="integration">
+        <img src="canvas-icon.png" alt="Canvas">
+        <span>Canvas</span>
+      </div>
+      <div class="integration">
+        <img src="dashboards-icon.png" alt="Dashboards">
+        <span>Dashboards</span>
+      </div>
+    </div>
+  </section>
+
+</body>
+</html>
